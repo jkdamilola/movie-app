@@ -10,7 +10,7 @@
                 <div class="card-header">Create New Movie</div>
                 <div class="card-body">
                     @include('flash::message')
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/movies/create') }}" aria-label="New Movie" enctype="multipart/form-data">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/films/create') }}" aria-label="New Movie" enctype="multipart/form-data">
                         {!! csrf_field() !!}
 
                         <div class="form-group row">

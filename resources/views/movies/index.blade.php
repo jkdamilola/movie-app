@@ -16,7 +16,7 @@
                         @endif
                         <div class="caption-full">
                             <h4 class="pull-right">${{ number_format($movie->ticket_price, 2) }}</h4>
-                            <h4><a href="{{ url('movies/'.$movie->slug) }}">{{$movie->name}}</a></h4>
+                            <h4><a href="{{ url('films/'.$movie->slug) }}">{{$movie->name}}</a></h4>
                             <h4>
                                 <span class="label label-default">{{ \Carbon\Carbon::parse($movie->release_date)->format('d/m/Y') }}</span> &nbsp; 
                                 <span class="label label-default">{{$movie->country}}</span>
