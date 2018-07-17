@@ -12,6 +12,32 @@ try {
     window.$ = window.jQuery = require('jquery');
 
     require('bootstrap');
+    require('bootstrap-select');
+    window.$(document).ready(function() {
+        window.$('#genre').selectpicker();
+
+        var reviewBox = $('#post-review-box');
+        var newReview = $('#review_comment');
+        var openReviewBtn = $('#open-review-box');
+        var closeReviewBtn = $('#close-review-box');
+        openReviewBtn.click(function(e) {
+            reviewBox.slideDown(400, function() {
+                newReview.focus();
+            });
+            openReviewBtn.fadeOut(100);
+            $('#hr-id').hide(100);
+            closeReviewBtn.show();
+        });
+        closeReviewBtn.click(function(e) {
+            e.preventDefault();
+            reviewBox.slideUp(300, function() {
+                newReview.focus();
+                openReviewBtn.fadeIn(200);
+                $('#hr-id').fadeIn(200);
+            });
+            closeReviewBtn.hide(); 
+        });
+    });
 } catch (e) {}
 
 /**

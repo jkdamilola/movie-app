@@ -19,9 +19,10 @@ class CreateMoviesTable extends Migration
             $table->text('description');
             $table->date('release_date');
             $table->integer('rating')->unsigned();
-            $table->decimal('ticket_price', 5, 2);
+            $table->decimal('ticket_price', 10, 2);
             $table->string('country');
             $table->string('photo');
+            $table->string('slug');
             $table->timestamps();
             $table->softDeletes();
         });
